@@ -1,5 +1,3 @@
-import React from "react";
-
 const WelcomeSection = () => {
   return (
     <section className="text-center max-w-3xl mx-auto">

@@ -1,4 +1,3 @@
-import React from "react";
 import PinterestBoard from "@/components/PinterestBoard";
 
 const DressCodePage = () => {

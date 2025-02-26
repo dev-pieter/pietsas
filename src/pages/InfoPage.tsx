@@ -1,5 +1,4 @@
 import Timeline from "@/components/Timeline";
-import React from "react";
 // import Map from "@/components/Map";
 
 const InfoPage = () => {

@@ -1,4 +1,3 @@
-import React from "react";
 import LocationSection from "@/components/LocationSection";
 import DateSection from "@/components/DateSection";
 import WelcomeSection from "@/components/WelcomeSection";

@@ -1,5 +1,3 @@
-import React from "react";
-
 const Timeline = () => {
   const events = [
     { time: "15:00", event: "Ceremony" },
