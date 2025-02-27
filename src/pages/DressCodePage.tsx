@@ -13,23 +13,13 @@ const DressCodePage = () => {
           </p>
         </section>
 
-        <div className="space-y-12">
-          <section>
-            <h3 className="text-xl font-semibold mb-4">For Men</h3>
-            <PinterestBoard
-              url="https://za.pinterest.com/saskiadebok/bedrooms"
-              height={600}
-            />
-          </section>
-
-          <section>
-            <h3 className="text-xl font-semibold mb-4">For Women</h3>
-            <PinterestBoard
-              url="https://www.pinterest.com/username/womens-wedding-attire/"
-              height={600}
-            />
-          </section>
-        </div>
+        <section>
+          <h3 className="text-xl font-semibold mb-4">Inspo Board</h3>
+          <PinterestBoard
+            url="https://za.pinterest.com/saskiadebok/bedrooms"
+            height={600}
+          />
+        </section>
       </div>
     </div>
   );

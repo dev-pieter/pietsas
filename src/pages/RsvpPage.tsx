@@ -19,6 +19,7 @@ import {
 } from "@/components/ui/select";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
+import DateSection from "@/components/DateSection";
 
 const formSchema = z.object({
   fullName: z.string().min(2, {
@@ -48,8 +49,9 @@ const RsvpPage = () => {
   }
 
   return (
-    <div className="container mx-auto px-4">
-      <div className="max-w-2xl mx-auto space-y-8">
+    <div className="container mx-auto">
+      <div className="max-w-3xl mx-auto space-y-8">
+        <DateSection />
         <Form {...form}>
           <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
             <FormField

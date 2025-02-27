@@ -20,9 +20,9 @@ const Navbar = ({ activeItem }: NavbarProps) => {
   ];
 
   return (
-    <div className="w-full sticky top-6 z-50">
-      <div className="container mx-auto px-4">
-        <div className="bg-white/90 backdrop-blur-md rounded-lg shadow-md border border-gray-500/20">
+    <div className="w-full max-w-3xl sticky top-4 z-50">
+      <div className="container mx-auto px-4 md:px-0">
+        <div className="bg-white/60 backdrop-blur-md rounded-lg shadow-md border border-gray-500/20">
           <NavigationMenu className="mx-auto py-3">
             <NavigationMenuList className="sm:gap-[0px] md:gap-6">
               {menuItems.map((item) => (
