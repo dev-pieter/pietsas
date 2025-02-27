@@ -28,7 +28,7 @@ function App() {
           element={
             <AppLayout
               activeItem="information"
-              heroImage="/images/hero-info.jpg"
+              heroImage="/images/hero-info.png"
               heroTitle="Information"
             >
               <InfoPage />

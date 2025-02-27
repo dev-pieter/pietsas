@@ -1,6 +1,7 @@
 body {
   font-family: "Playfair Display";
   font-size: 22px;
+  text-align: justify;
 }
 
 @media (max-width: 768px) {
