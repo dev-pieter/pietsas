@@ -52,7 +52,7 @@ function App() {
           element={
             <AppLayout
               activeItem="rsvp"
-              heroImage="/images/hero-rsvp.jpg"
+              heroImage="/images/hero-rsvp.png"
               heroTitle="RSVP"
             >
               <RsvpPage />
