@@ -2,3 +2,9 @@ body {
   font-family: "Playfair Display";
   font-size: 22px;
 }
+
+@media (max-width: 768px) {
+  .NavigationMenuLink[data-active]::after {
+    bottom: -4px;
+  }
+}
