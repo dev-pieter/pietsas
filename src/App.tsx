@@ -17,7 +17,6 @@ function App() {
               activeItem="home"
               heroImage="/images/home-bg.png"
               heroTitle="Saskia &amp; Pieter"
-              heroSubtitle="We're getting married!"
             >
               <HomePage />
             </AppLayout>
