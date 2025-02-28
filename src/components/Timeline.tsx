@@ -14,10 +14,10 @@ const Timeline = () => {
             key={index}
             className="flex items-center gap-8 p-4 rounded-lg hover:bg-primary/5"
           >
-            <span className="text-xl font-semibold text-primary">
+            <span className="text-xs md:text-lg font-semibold text-primary">
               {item.time}
             </span>
-            <span className="text-xl">{item.event}</span>
+            <span className="text-xs md:text-lg">{item.event}</span>
           </div>
         ))}
       </div>
