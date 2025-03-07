@@ -23,7 +23,7 @@ const DateSection = () => {
   const calendarLinks = generateCalendarLinks(event);
 
   return (
-    <section className="text-center bg-primary/5 rounded-xl p-12">
+    <section className="text-center bg-primary/5 rounded-xl p-12 border border-gray-300">
       {/* <h2 className="text-4xl font-bold mb-6">Save the Date</h2> */}
       <div className="text-2xl font-light space-y-4">
         <p className="text-primary">Saturday</p>

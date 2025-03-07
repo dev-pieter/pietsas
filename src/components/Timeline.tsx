@@ -8,7 +8,7 @@ const Timeline = () => {
 
   return (
     <section className="max-w-full mx-auto">
-      <div className="space-y-6 bg-primary/5 rounded-xl p-8">
+      <div className="space-y-6 bg-primary/5 rounded-xl p-8 border border-gray-300">
         {events.map((item, index) => (
           <div
             key={index}
