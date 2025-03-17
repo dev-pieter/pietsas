@@ -16,7 +16,7 @@ function App() {
             <AppLayout
               activeItem="home"
               heroImage="/images/home-bg.png"
-              heroTitle="Saskia &amp; Pieter"
+              heroTitle="Saskia and Pieter"
             >
               <HomePage />
             </AppLayout>

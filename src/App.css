@@ -1,7 +1,16 @@
+@font-face {
+  font-family: "Chaviera";
+  src: url("/fonts/chaviera_regular.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
 body {
-  font-family: "Roboto Mono", monospace;
+  font-family: Helvetica, sans-serif;
   font-size: 18px;
   text-align: justify;
+  background-color: rgb(240, 237, 232);
 }
 
 h1,
@@ -10,20 +19,24 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Bodoni Moda", serif;
+  font-family: "Chaviera", serif;
+  text-transform: uppercase;
   font-weight: normal;
 }
 
 h1 {
   font-size: 3.5rem;
+  line-height: 2rem;
 }
 
 h2 {
   font-size: 2.5rem;
+  line-height: 1.5rem;
 }
 
 h3 {
   font-size: 2rem;
+  line-height: 1.3rem;
 }
 
 @media (max-width: 768px) {
