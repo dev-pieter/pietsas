@@ -27,7 +27,7 @@ const DateSection = () => {
       {/* <h2 className="text-4xl font-bold mb-6">Save the Date</h2> */}
       <div className="text-2xl font-light space-y-4">
         <p className="text-primary">Saturday</p>
-        <h3 className="my-2 text-accent">7 February 2026</h3>
+        <h3 className="my-2">7 February 2026</h3>
         <p className="text-primary">at 18:00</p>
 
         <div className="pt-6">
