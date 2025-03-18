@@ -10,6 +10,7 @@ body {
   font-family: Helvetica, sans-serif;
   font-size: 18px;
   text-align: justify;
+  text-transform: lowercase;
   background-color: rgb(240, 237, 232);
 }
 
