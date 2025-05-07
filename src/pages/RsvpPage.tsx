@@ -1,58 +1,24 @@
-import { zodResolver } from "@hookform/resolvers/zod";
-import { useForm } from "react-hook-form";
-import * as z from "zod";
-import {
-  Form,
-  FormControl,
-  FormField,
-  FormItem,
-  FormLabel,
-  FormMessage,
-} from "@/components/ui/form";
-import { Input } from "@/components/ui/input";
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "@/components/ui/select";
-import { Textarea } from "@/components/ui/textarea";
-import { Button } from "@/components/ui/button";
 import DateSection from "@/components/DateSection";
 
-const formSchema = z.object({
-  fullName: z.string().min(2, {
-    message: "Name must be at least 2 characters.",
-  }),
-  email: z.string().email({
-    message: "Please enter a valid email address.",
-  }),
-  numberOfGuests: z.string(),
-  dietaryRequirements: z.string().optional(),
-});
-
 const RsvpPage = () => {
-  const form = useForm<z.infer<typeof formSchema>>({
-    resolver: zodResolver(formSchema),
-    defaultValues: {
-      fullName: "",
-      email: "",
-      numberOfGuests: "1",
-      dietaryRequirements: "",
-    },
-  });
-
-  function onSubmit(values: z.infer<typeof formSchema>) {
-    console.log(values);
-    // Handle form submission
-  }
-
   return (
     <div className="container mx-auto">
       <div className="max-w-3xl mx-auto space-y-8">
         <DateSection />
-        <Form {...form}>
+        <iframe
+          src="https://www.koordio.co.za/rsvp/28?additionalFields=SongRequest&buttonColor=%2343687d"
+          width="100%"
+          height="550"
+          style={{
+            border: "none",
+            maxWidth: "600px",
+            margin: "0 auto",
+            display: "block",
+            borderRadius: "8px",
+          }}
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        ></iframe>
+        {/* <Form {...form}>
           <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
             <FormField
               control={form.control}
@@ -132,7 +98,7 @@ const RsvpPage = () => {
               Submit RSVP
             </Button>
           </form>
-        </Form>
+        </Form> */}
       </div>
     </div>
   );
