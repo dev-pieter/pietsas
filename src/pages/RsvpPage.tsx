@@ -1,4 +1,5 @@
 import DateSection from "@/components/DateSection";
+const URL = import.meta.env.VITE_RSVP_URL;
 
 const RsvpPage = () => {
   return (
@@ -6,7 +7,7 @@ const RsvpPage = () => {
       <div className="max-w-3xl mx-auto space-y-8">
         <DateSection />
         <iframe
-          src="https://www.koordio.co.za/rsvp/28?additionalFields=SongRequest&buttonColor=%2343687d"
+          src={URL}
           width="100%"
           height="550"
           style={{
