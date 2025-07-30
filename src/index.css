@@ -122,3 +122,14 @@
     @apply bg-background text-foreground;
   }
 }
+
+@font-face {
+  font-family: 'Chaviera';
+  src: url('/fonts/chaviera_regular.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.font-serif {
+  font-family: 'Chaviera', 'Playfair Display', serif;
+}
