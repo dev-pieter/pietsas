@@ -1,8 +1,8 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router";
-import Homepage from "./pages/Homepage";
-import OurStory from "./pages/OurStory";
-import EventInfo from "./pages/EventInfo";
-import TravelStay from "./pages/TravelStay";
+import Homepage from "@/pages/Homepage";
+import OurStory from "@/pages/OurStory";
+import EventInfo from "@/pages/EventInfo";
+import TravelStay from "@/pages/TravelStay";
 
 function App() {
   return (
