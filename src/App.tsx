@@ -1,5 +1,5 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router";
-import Homepage from "@/pages/Homepage";
+import Homepage from "@/pages/HomePage";
 import OurStory from "@/pages/OurStory";
 import EventInfo from "@/pages/EventInfo";
 import TravelStay from "@/pages/TravelStay";
