@@ -4,7 +4,14 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-This is a React + TypeScript wedding website built with Vite and Tailwind CSS. The project follows a minimalist design approach with sculptural florals and a late-summer color palette (Blue Bayoux, Olive Green, Pampas, Rock Blue, Kilamanjaro). The site is for a wedding on February 7, 2026, at Hawksmoor House, Stellenbosch.
+This is a React + TypeScript wedding website built with Vite and Tailwind CSS for **Pieter & Saskia's wedding**. The project follows a minimalist design approach with sculptural florals and a late-summer color palette (Blue Bayoux, Olive Green, Pampas, Rock Blue, Kilamanjaro). The site is for a wedding on February 7, 2026, at Hawksmoor House, Stellenbosch.
+
+### Couple Information
+- **Bride**: Saskia
+- **Groom**: Pieter  
+- **Wedding Date**: February 7, 2026
+- **Venue**: Hawksmoor House, Stellenbosch, South Africa
+- **Nicknames**: Piet & Sas (used in informal contexts)
 
 ## Development Commands
 
@@ -41,6 +48,17 @@ This is a React + TypeScript wedding website built with Vite and Tailwind CSS. T
 - **Colors**: Deep Blue (#496677), Rock Blue (#9FB2CD), Pampas (#F0EDE8), Olive Green (#ABAC5A), Kilamanjaro (#271203)
 - **Typography**: Elegant serif headers + clean sans-serif body text
 - **Components**: Pre-configured shadcn/ui components with consistent styling
+
+### Design Philosophy & Layout Approach
+- **Minimal Design**: Clean, white backgrounds with ample white space
+- **Typography-focused**: Large serif headings with letter spacing, minimal decorative elements
+- **Navigation**: Fixed header with transparent background and backdrop blur
+- **Responsive**: Mobile-first approach with hamburger menu on mobile, centered navigation on desktop
+- **Color Usage**: Subtle color accents, primarily using neutral tones with brand colors for highlights
+- **Layout**: Centered content with consistent max-width containers (max-w-4xl)
+- **Spacing**: Generous padding and margins to create breathing room
+- **Images**: Clean presentation without complex overlays or filters
+- **Buttons**: Minimal styling, often text-based with hover states
 
 ### Site Structure (per SPEC.md)
 The website should include: Homepage with hero, Our Story, Event Info, Travel & Stay, RSVP form, FAQ, Registry, and Footer sections. The design emphasizes relaxed elegance with minimal layout and ample white space.
