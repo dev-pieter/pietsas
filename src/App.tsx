@@ -1,63 +1,17 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router";
-import AppLayout from "./components/AppLayout";
-import HomePage from "./pages/HomePage";
-import InfoPage from "./pages/InfoPage";
-import DressCodePage from "./pages/DressCodePage";
-import RsvpPage from "./pages/RsvpPage";
-import "./App.css";
+import Homepage from "./pages/Homepage";
+import OurStory from "./pages/OurStory";
+import EventInfo from "./pages/EventInfo";
+import TravelStay from "./pages/TravelStay";
 
 function App() {
   return (
     <Router>
       <Routes>
-        <Route
-          path="/"
-          element={
-            <AppLayout
-              activeItem="home"
-              heroImage="/images/home-bg.png"
-              heroTitle="Saskia and Pieter"
-            >
-              <HomePage />
-            </AppLayout>
-          }
-        />
-        <Route
-          path="/info"
-          element={
-            <AppLayout
-              activeItem="information"
-              heroImage="/images/hero-info.png"
-              heroTitle="Information"
-            >
-              <InfoPage />
-            </AppLayout>
-          }
-        />
-        <Route
-          path="/dress-code"
-          element={
-            <AppLayout
-              activeItem="dress code"
-              heroImage="/images/hero-dress-code.png"
-              heroTitle="Dress Code"
-            >
-              <DressCodePage />
-            </AppLayout>
-          }
-        />
-        <Route
-          path="/rsvp"
-          element={
-            <AppLayout
-              activeItem="rsvp"
-              heroImage="/images/hero-rsvp.png"
-              heroTitle="RSVP"
-            >
-              <RsvpPage />
-            </AppLayout>
-          }
-        />
+        <Route path="/" element={<Homepage />} />
+        <Route path="/our-story" element={<OurStory />} />
+        <Route path="/event-info" element={<EventInfo />} />
+        <Route path="/travel" element={<TravelStay />} />
       </Routes>
     </Router>
   );
