@@ -9,7 +9,7 @@ const Header = () => {
   const navItems = [
     { label: "INFO", path: "/event-info" },
     { label: "ABOUT", path: "/our-story" },
-    { label: "PIETER & SASKIA'S WEDDING", path: "/", isTitle: true },
+    { label: "PIETER & SASKIA", path: "/", isTitle: true },
     { label: "STORIES", path: "/stories" },
     { label: "RSVP", path: "/rsvp" },
   ];

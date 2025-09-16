@@ -18,11 +18,21 @@ const Homepage = () => {
             PIETER & SASKIA
           </p>
           
-          <div className="relative">
+          <div className="flex flex-col sm:flex-row gap-4 sm:gap-4 justify-center max-w-4xl mx-auto">
             <img 
-              src="/images/hero-info2.jpg" 
-              alt="Wedding couple" 
-              className="w-full max-w-2xl mx-auto shadow-lg"
+              src="/images/home-1.jpg" 
+              alt="Pieter and Saskia on the beach" 
+              className="flex-1 max-w-xs sm:max-w-xs shadow-lg mx-auto sm:mx-0"
+            />
+            <img 
+              src="/images/home-2.jpg" 
+              alt="Pieter and Saskia kiss" 
+              className="hidden sm:block flex-1 max-w-xs shadow-lg"
+            />
+            <img 
+              src="/images/home-3.jpg" 
+              alt="Pieter and Saskia intimate moment" 
+              className="hidden sm:block flex-1 max-w-xs shadow-lg"
             />
           </div>
         </div>

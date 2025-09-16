@@ -10,6 +10,14 @@ const OurStory = () => {
       <section className="pt-32 pb-20 px-6">
         <div className="max-w-4xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            {/* Photo Gallery */}
+            <div className="relative">
+              <img 
+                src="/images/our-story.gif" 
+                alt="Pieter and Saskia on the beach" 
+                className="flex-1 w-full shadow-lg mx-auto sm:mx-0"
+              />
+            </div>
             {/* Story Text */}
             <div className="space-y-6 text-[#496677] leading-relaxed">
               <div>
@@ -40,13 +48,6 @@ const OurStory = () => {
                   during a sunset picnic at Kirstenbosch. Sas said yes (after making him sweat for 
                   a dramatic thirty seconds).
                 </p>
-              </div>
-            </div>
-
-            {/* Photo Gallery */}
-            <div className="space-y-4">
-              <div className="bg-white/50 text-center h-full">
-                <video src="/images/our-story.mp4" className="object-cover" autoPlay loop muted></video>
               </div>
             </div>
           </div>

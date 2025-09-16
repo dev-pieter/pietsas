@@ -48,6 +48,14 @@ const EventInfo = () => {
             </div>
           </div>
 
+          <div className="relative mb-20">
+            <img 
+              src="/images/hawksmoor-1.png" 
+              alt="Wedding couple" 
+              className="w-full max-w-2xl mx-auto shadow-lg"
+            />
+          </div>
+
           {/* Schedule */}
           <div className="mb-20">
             <h2 className="text-3xl font-serif mb-12 text-[#271203]">
