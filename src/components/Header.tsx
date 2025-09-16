@@ -1,5 +1,6 @@
 import { useNavigate, useLocation } from "react-router";
 import { useState } from "react";
+import { Button } from "./ui/button";
 
 const Header = () => {
   const navigate = useNavigate();
@@ -7,11 +8,9 @@ const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const navItems = [
-    { label: "INFO", path: "/event-info" },
-    { label: "ABOUT", path: "/our-story" },
-    { label: "PIETER & SASKIA", path: "/", isTitle: true },
-    { label: "STORIES", path: "/stories" },
-    { label: "RSVP", path: "/rsvp" },
+    { label: "ABOUT", path: "our-story" },
+    { label: "INFO", path: "event-details" },
+    { label: "TRAVEL", path: "travel-stay" },
   ];
 
   const toggleMenu = () => {
@@ -19,34 +18,32 @@ const Header = () => {
   };
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-white/30 backdrop-blur-sm border-b border-[#9FB2CD]/20">
-      <nav className="max-w-7xl mx-auto px-4 sm:px-6 py-4 sm:py-6">
+    <header className="bg-white/30 pb-8">
+      <nav className="max-w-7xl mx-auto px-4 sm:px-6 py-4 sm:py-6 z-50 relative">
+        <div className="hidden lg:flex items-center justify-center">
+          <Button
+            variant={"link"}
+            onClick={() => navigate("/")}
+            className="font-serif text-base xl:text-2xl text-primary py-4"
+          >
+            PIETER & SASKIA
+          </Button>
+        </div>
         {/* Desktop Navigation */}
         <div className="hidden lg:flex items-center justify-center">
-          <div className="flex items-center space-x-8 xl:space-x-12 text-sm tracking-wider">
+          <div className="flex items-center space-x-4 xl:space-x-4 text-sm tracking-wider">
             {navItems.map((item, index) => {
-              if (item.isTitle) {
-                return (
-                  <button
-                    key={index}
-                    onClick={() => navigate("/")}
-                    className="font-serif text-base xl:text-lg text-[#271203] hover:opacity-70 transition-opacity px-2 xl:px-4"
-                  >
-                    {item.label}
-                  </button>
-                );
-              }
-              
               return (
-                <button
+                <Button
                   key={index}
-                  onClick={() => navigate(item.path)}
-                  className={`uppercase text-[#496677] hover:text-[#271203] transition-colors text-xs xl:text-sm ${
-                    location.pathname === item.path ? "text-[#271203]" : ""
+                  variant={"link"}
+                  onClick={() => window.scrollTo({ top: document.getElementById(item.path)?.offsetTop || 0, behavior: "smooth" })}
+                  className={`uppercase text-foreground hover:text-secondary transition-colors text-xs xl:text-sm ${
+                    location.pathname === item.path ? "text-secondary" : ""
                   }`}
                 >
                   {item.label}
-                </button>
+                </Button>
               );
             })}
           </div>
@@ -56,12 +53,13 @@ const Header = () => {
         <div className="lg:hidden">
           <div className="flex items-center justify-between">
             {/* Mobile Title */}
-            <button
+            <Button
+              variant={"link"}
               onClick={() => navigate("/")}
               className="font-serif text-sm sm:text-base text-[#271203] hover:opacity-70 transition-opacity"
             >
-              PIETER & SASKIA'S WEDDING
-            </button>
+              PIETER & SASKIA
+            </Button>
 
             {/* Hamburger Button */}
             <button
@@ -69,11 +67,26 @@ const Header = () => {
               className="text-[#496677] hover:text-[#271203] transition-colors"
               aria-label="Toggle menu"
             >
-              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg
+                className="w-6 h-6"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
                 {isMenuOpen ? (
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M6 18L18 6M6 6l12 12"
+                  />
                 ) : (
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M4 6h16M4 12h16M4 18h16"
+                  />
                 )}
               </svg>
             </button>
@@ -83,22 +96,20 @@ const Header = () => {
           {isMenuOpen && (
             <div className="absolute top-full left-0 right-0 bg-white/95 backdrop-blur-sm border-t border-[#9FB2CD]/20">
               <div className="px-4 py-6 space-y-4">
-                {navItems
-                  .filter(item => !item.isTitle)
-                  .map((item, index) => (
-                    <button
-                      key={index}
-                      onClick={() => {
-                        navigate(item.path);
-                        setIsMenuOpen(false);
-                      }}
-                      className={`block w-full text-left uppercase text-sm tracking-wider text-[#496677] hover:text-[#271203] transition-colors py-2 ${
-                        location.pathname === item.path ? "text-[#271203]" : ""
-                      }`}
-                    >
-                      {item.label}
-                    </button>
-                  ))}
+                {navItems.map((item, index) => (
+                  <button
+                    key={index}
+                    onClick={() => {
+                      navigate(item.path);
+                      setIsMenuOpen(false);
+                    }}
+                    className={`block w-full text-left uppercase text-sm tracking-wider text-[#496677] hover:text-[#271203] transition-colors py-2 ${
+                      location.pathname === item.path ? "text-[#271203]" : ""
+                    }`}
+                  >
+                    {item.label}
+                  </button>
+                ))}
               </div>
             </div>
           )}
