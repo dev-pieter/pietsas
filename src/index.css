@@ -11,10 +11,10 @@
   --card-foreground: oklch(0.145 0 0);
   --popover: oklch(1 0 0);
   --popover-foreground: oklch(0.145 0 0);
-  --primary: rgb(67, 104, 125); /* Bright, vibrant blue */
-  --primary-foreground: oklch(0.985 0 0);
-  --secondary: rgb(171, 172, 90);
-  --secondary-foreground: oklch(0.205 0 0);
+  --primary: rgb(160, 179, 211); /* Bright, vibrant blue */
+  --primary-foreground: rgb(67, 104, 125);
+  --secondary: #8A8342;
+  --secondary-foreground: oklch(1 0 0);
   --muted: rgb(171, 172, 90);
   --muted-foreground: rgb(39, 18, 3);
   --accent: rgb(171, 172, 90);
