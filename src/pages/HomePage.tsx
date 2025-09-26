@@ -122,6 +122,12 @@ const Homepage = () => {
               size="lg"
               variant="secondary"
               className="w-full mx-auto uppercase text-lg rounded-xs"
+              onClick={() => {
+                const rsvpSection = document.getElementById("rsvp");
+                if (rsvpSection) {
+                  rsvpSection.scrollIntoView({ behavior: "smooth" });
+                }
+              }}
             >
               RSVP
             </Button>
@@ -150,8 +156,21 @@ const Homepage = () => {
             <h2 className="text-2xl uppercase mb-8 text-[#271203] tracking-[0.2em]">
               When & Where
             </h2>
-            <img src="/images/hawksmoor.png" className="m-auto w-xl object-cover h-70"></img>
-            <p className="text-[#8a8a8aa1] text-center mb-6">Matjieskuil Farm, R304, Stellenbosch 7599. <br /><a className="underline" href="https://www.hawksmoor.co.za" target="_blank" rel="noopener noreferrer">Go to website</a></p>
+            <img
+              src="/images/hawksmoor.png"
+              className="m-auto w-xl object-cover h-70"
+            ></img>
+            <p className="text-[#8a8a8aa1] text-center mb-6">
+              Matjieskuil Farm, R304, Stellenbosch 7599. <br />
+              <a
+                className="underline"
+                href="https://www.hawksmoor.co.za"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Go to website
+              </a>
+            </p>
             <div className="text-lg max-w-4xl mx-auto">
               <div className="text-center">
                 <p className="text-[#271203] text-justify mb-6">
@@ -263,7 +282,7 @@ As evenings in the Winelands can cool off, a light shawl, jacket, or wrap will h
           </div>
         </div>
       </section>
-      <section id="event-details" className="w-full bg-secondary pt-8">
+      <section id="event-details" className="w-full bg-secondary pt-8 pb-8">
         <h2 className="text-center text-4xl uppercase font-serif text-secondary-foreground mb-4 tracking-[0.2em]">
           FAQ
         </h2>
@@ -379,6 +398,23 @@ As evenings in the Winelands can cool off, a light shawl, jacket, or wrap will h
               registry here: [Insert link]
             </p>
           </div>
+        </div>
+      </section>
+      <section className="pt-20 pb-20 max-w-4xl m-auto" id="rsvp">
+        <h2 className="text-center text-4xl uppercase font-serif text-[#271203] mb-4 tracking-[0.2em]">
+          RSVP
+        </h2>
+        <div className="text-lg max-w-4xl mx-auto px-6">
+          <div className="text-center">
+            <p className="text-[#271203] mb-6">
+              Please submit your RSVP by 1 December 2025. We can’t wait to
+              celebrate with you!
+            </p>
+          </div>
+          <iframe
+          src={import.meta.env.VITE_RSVP_URL}
+          className="w-full h-150 rounded-md drop-shadow-lg"
+        ></iframe>
         </div>
       </section>
     </div>
