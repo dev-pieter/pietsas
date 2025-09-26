@@ -1,22 +1,22 @@
 import { Button } from "@/components/ui/button";
 
 const images = [
-  "/images/SasPiet-14.jpg",
-  "/images/SasPiet-1.jpg",
-  "/images/SasPiet-2.jpg",
-  "/images/SasPiet-4.jpg",
-  "/images/SasPiet-6.jpg",
-  "/images/SasPiet-8.jpg",
-  "/images/SasPiet-7.jpg",
-  "/images/SasPiet-12.jpg",
-  "/images/SasPiet-9.jpg",
-  "/images/SasPiet-10.jpg",
-  "/images/SasPiet-3.jpg",
-  "/images/SasPiet-13.jpg",
-  "/images/SasPiet-5.jpg",
-  "/images/SasPiet-15.jpg",
-  "/images/SasPiet-16.jpg",
-  "/images/SasPiet-11.jpg",
+  "/images/saspiet-web-14.jpg",
+  "/images/saspiet-web-1.jpg",
+  "/images/saspiet-web-2.jpg",
+  "/images/saspiet-web-4.jpg",
+  "/images/saspiet-web-6.jpg",
+  "/images/saspiet-web-8.jpg",
+  "/images/saspiet-web-7.jpg",
+  "/images/saspiet-web-12.jpg",
+  "/images/saspiet-web-9.jpg",
+  "/images/saspiet-web-10.jpg",
+  "/images/saspiet-web-3.jpg",
+  "/images/saspiet-web-13.jpg",
+  "/images/saspiet-web-5.jpg",
+  "/images/saspiet-web-15.jpg",
+  "/images/saspiet-web-16.jpg",
+  "/images/saspiet-web-11.jpg",
 ];
 
 const Homepage = () => {
@@ -150,7 +150,7 @@ const Homepage = () => {
         {/* Photo Gallery */}
         <div className="pt-20 relative w-full h-60 md:h-160">
           <img
-            src="/images/SasPiet-banner.jpg"
+            src="/images/saspiet-web-banner.jpg"
             alt="Pieter and Saskia on the beach"
             className="flex-1 w-full h-full object-cover mx-auto sm:mx-0"
           />
