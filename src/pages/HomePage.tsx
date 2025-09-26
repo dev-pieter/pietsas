@@ -1,11 +1,22 @@
 import { Button } from "@/components/ui/button";
 
 const images = [
-  "/images/home-1.jpg",
-  "/images/home-2.jpg",
-  "/images/home-3.jpg",
-  "/images/home-4.jpg",
-  "/images/home-5.jpg",
+  "/images/SasPiet-14.JPG",
+  "/images/SasPiet-1.JPG",
+  "/images/SasPiet-2.JPG",
+  "/images/SasPiet-4.JPG",
+  "/images/SasPiet-6.JPG",
+  "/images/SasPiet-8.JPG",
+  "/images/SasPiet-7.JPG",
+  "/images/SasPiet-12.JPG",
+  "/images/SasPiet-9.JPG",
+  "/images/SasPiet-10.JPG",
+  "/images/SasPiet-3.JPG",
+  "/images/SasPiet-13.JPG",
+  "/images/SasPiet-5.JPG",
+  "/images/SasPiet-15.JPG",
+  "/images/SasPiet-16.JPG",
+  "/images/SasPiet-11.JPG",
 ];
 
 const Homepage = () => {
@@ -26,14 +37,14 @@ const Homepage = () => {
               />
             ))}
             {/* Duplicate set for seamless loop */}
-            {images.map((src, index) => (
+            {/* {images.map((src, index) => (
               <img
                 key={index + images.length}
                 src={src}
                 alt={`Pieter and Saskia duplicate ${index + 1}`}
                 className="w-48 sm:w-64 md:w-80 h-64 sm:h-80 md:h-120 object-cover shadow-lg flex-shrink-0"
               />
-            ))}
+            ))} */}
             {/* Duplicate set for seamless loop */}
             {images.map((src, index) => (
               <img
@@ -137,11 +148,11 @@ const Homepage = () => {
 
       <section>
         {/* Photo Gallery */}
-        <div className="pt-20 relative w-full h-180">
+        <div className="pt-20 relative w-full h-60 md:h-160">
           <img
-            src="/images/our-story.gif"
+            src="/images/SasPiet-banner.JPG"
             alt="Pieter and Saskia on the beach"
-            className="flex-1 w-full h-full object-cover shadow-lg mx-auto sm:mx-0"
+            className="flex-1 w-full h-full object-cover mx-auto sm:mx-0"
           />
         </div>
       </section>
@@ -158,9 +169,9 @@ const Homepage = () => {
             </h2>
             <img
               src="/images/hawksmoor.png"
-              className="m-auto w-xl object-cover h-70"
+              className="m-auto w-xl object-cover h-80"
             ></img>
-            <p className="text-[#8a8a8aa1] text-center mb-6">
+            <p className="text-[#8a8a8aa1] text-center mb-6 italic">
               Matjieskuil Farm, R304, Stellenbosch 7599. <br />
               <a
                 className="underline"
@@ -176,7 +187,7 @@ const Homepage = () => {
                 <p className="text-[#271203] text-justify mb-6">
                   We can’t wait to celebrate with you in the beautiful Cape
                   Winelands! Our wedding will take place on Friday, 7 February
-                  2025 at the charming Hawksmoor House near Stellenbosch.
+                  2026 at the charming Hawksmoor House near Stellenbosch.
                   Hawksmoor House is a historic Cape Dutch homestead set on a
                   working wine farm, about 40 minutes from Cape Town and 20
                   minutes from Stellenbosch town centre. There is ample on-site
@@ -186,9 +197,9 @@ const Homepage = () => {
               </div>
             </div>
           </div>
-          <div className="mb-20 bg-primary w-full">
+          <div className="mb-10 bg-secondary w-full">
             {/* Schedule */}
-            <h2 className="text-2xl pt-8 uppercase mb-8 text-primary-foreground tracking-[0.2em]">
+            <h2 className="text-2xl pt-8 uppercase mb-8 text-secondary-foreground tracking-[0.2em]">
               Order of Events
             </h2>
             <div className="grid gap-4 grid-cols-1 md:grid-cols-5 mx-auto py-8 text-center">
@@ -196,7 +207,7 @@ const Homepage = () => {
                 <p className="text-secondary-foreground font-serif tracking-[0.2em] font-bold text-4xl mb-4">
                   16:00
                 </p>
-                <p className="text-primary-foreground uppercase">
+                <p className="text-secondary-foreground uppercase">
                   Arrival & Drinks
                 </p>
               </div>
@@ -204,13 +215,13 @@ const Homepage = () => {
                 <p className="text-secondary-foreground tracking-[0.2em] font-bold text-4xl mb-4 font-serif">
                   16:30
                 </p>
-                <p className="text-primary-foreground uppercase">Ceremony</p>
+                <p className="text-secondary-foreground uppercase">Ceremony</p>
               </div>
               <div className="pb-4">
                 <p className="text-secondary-foreground tracking-[0.2em] font-bold text-4xl mb-4 font-serif">
                   17:00
                 </p>
-                <p className="text-primary-foreground uppercase">
+                <p className="text-secondary-foreground uppercase">
                   Cocktail Hour
                 </p>
               </div>
@@ -218,7 +229,7 @@ const Homepage = () => {
                 <p className="text-secondary-foreground tracking-[0.2em] font-bold text-4xl mb-4 font-serif">
                   18:30
                 </p>
-                <p className="text-primary-foreground uppercase">
+                <p className="text-secondary-foreground uppercase">
                   Reception & Dinner
                 </p>
               </div>
@@ -226,9 +237,21 @@ const Homepage = () => {
                 <p className="text-secondary-foreground tracking-[0.2em] font-bold text-4xl mb-4 font-serif">
                   20:30
                 </p>
-                <p className="text-primary-foreground uppercase">Dancing</p>
+                <p className="text-secondary-foreground uppercase">Dancing</p>
               </div>
             </div>
+          </div>
+          <div className="max-w-4xl m-auto mb-20 text-xs md:text-lg px-6">
+            <img
+              src="/images/hawksmoor-map-anotated.jpg"
+              className="w-full object-cover max-h-140 mb-8"
+            ></img>
+            <p className="text-secondary text-center">
+              1 ENTRANCE GATE | 2 PARKING | 3 ARRIVAL DRINKS | 4 CEREMONY
+            </p>
+            <p className="text-secondary text-center mb-6">
+              5 COCKTAILS & CANAPES | 6 RECEPTION AREA | 7 DANCEFLOOR | 8 RESTROOMS
+            </p>
           </div>
 
           {/* Dress Code */}
@@ -238,7 +261,7 @@ const Homepage = () => {
             </h2>
             <div className="text-lg max-w-4xl mx-auto">
               <div className="text-center">
-                <h3 className="text-sm tracking-[0.2em] uppercase text-[#496677] mb-4">
+                <h3 className="text-sm tracking-[0.2em] uppercase text-secondary mb-4">
                   Garden Formal
                 </h3>
                 <p className="text-[#271203] text-justify mb-6">
@@ -248,7 +271,7 @@ const Homepage = () => {
                   colour - don't be shy, any colour is welcome! Yes - even black
                   or red, but please do avoid white or ivory!
                 </p>
-                <h3 className="text-sm tracking-[0.2em] uppercase text-[#496677] mb-4">
+                <h3 className="text-sm tracking-[0.2em] uppercase text-secondary mb-4">
                   Footwear
                 </h3>
                 <p className="text-[#271203] text-justify mb-6">
@@ -256,7 +279,7 @@ const Homepage = () => {
                   paths, so we recommend block heels, wedges, or smart flats
                   over stilettos or thin heels to keep you comfortable.
                 </p>
-                <h3 className="text-sm tracking-[0.2em] uppercase text-[#496677] mb-4">
+                <h3 className="text-sm tracking-[0.2em] uppercase text-secondary mb-4">
                   Sun & Weather
                 </h3>
                 <p className="text-[#271203] text-justify">
@@ -412,11 +435,12 @@ As evenings in the Winelands can cool off, a light shawl, jacket, or wrap will h
             </p>
           </div>
           <iframe
-          src={import.meta.env.VITE_RSVP_URL}
-          className="w-full h-150 rounded-md drop-shadow-lg"
-        ></iframe>
+            src={import.meta.env.VITE_RSVP_URL}
+            className="w-full h-150 rounded-md drop-shadow-lg"
+          ></iframe>
         </div>
       </section>
+      {/* <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScYcEEOAuIKUvTWaW7MAoZcwHDpmftTNxG32kel8D6hu3tjxQ/viewform?embedded=true" width="640" height="1347" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe> */}
     </div>
   );
 };
