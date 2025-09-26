@@ -1,22 +1,22 @@
 import { Button } from "@/components/ui/button";
 
 const images = [
-  "/images/SasPiet-14.JPG",
-  "/images/SasPiet-1.JPG",
-  "/images/SasPiet-2.JPG",
-  "/images/SasPiet-4.JPG",
-  "/images/SasPiet-6.JPG",
-  "/images/SasPiet-8.JPG",
-  "/images/SasPiet-7.JPG",
-  "/images/SasPiet-12.JPG",
-  "/images/SasPiet-9.JPG",
-  "/images/SasPiet-10.JPG",
-  "/images/SasPiet-3.JPG",
-  "/images/SasPiet-13.JPG",
-  "/images/SasPiet-5.JPG",
-  "/images/SasPiet-15.JPG",
-  "/images/SasPiet-16.JPG",
-  "/images/SasPiet-11.JPG",
+  "/images/SasPiet-14.jpg",
+  "/images/SasPiet-1.jpg",
+  "/images/SasPiet-2.jpg",
+  "/images/SasPiet-4.jpg",
+  "/images/SasPiet-6.jpg",
+  "/images/SasPiet-8.jpg",
+  "/images/SasPiet-7.jpg",
+  "/images/SasPiet-12.jpg",
+  "/images/SasPiet-9.jpg",
+  "/images/SasPiet-10.jpg",
+  "/images/SasPiet-3.jpg",
+  "/images/SasPiet-13.jpg",
+  "/images/SasPiet-5.jpg",
+  "/images/SasPiet-15.jpg",
+  "/images/SasPiet-16.jpg",
+  "/images/SasPiet-11.jpg",
 ];
 
 const Homepage = () => {
@@ -70,31 +70,31 @@ const Homepage = () => {
       </section>
 
       {/* Basic Event Info */}
-      <section id="event-details" className="lg:w-full">
-        <div className="grid grid-cols-3 gap-4 md:gap-12 bg-secondary text-secondary-foreground py-4">
+      <section id="event-details" className="w-full">
+        <div className="grid grid-cols-3 gap-4 md:gap-12 bg-secondary text-secondary-foreground py-4 px-6">
           <div className="text-center">
-            <h3 className="text-xs md:text-sm tracking-[0.2em] uppercase mb-4">
+            <h3 className="text-[0.5rem] md:text-sm tracking-[0.2em] uppercase mb-4">
               DATE
             </h3>
-            <p className="text-sm md:text-xl uppercase tracking-[0.2em]">
+            <p className="text-xs md:text-xl uppercase tracking-[0.2em]">
               7 February 2026
             </p>
           </div>
 
           <div className="text-center">
-            <h3 className="text-xs md:text-sm tracking-[0.2em] uppercase mb-4">
+            <h3 className="text-[0.5rem] md:text-sm tracking-[0.2em] uppercase mb-4">
               TIME
             </h3>
-            <p className="text-sm md:text-xl uppercase tracking-[0.2em]">
+            <p className="text-xs md:text-xl uppercase tracking-[0.2em]">
               16:00
             </p>
           </div>
 
           <div className="text-center">
-            <h3 className="text-xs md:text-sm tracking-[0.2em] uppercase mb-4">
+            <h3 className="text-[0.5rem] md:text-sm tracking-[0.2em] uppercase mb-4">
               VENUE
             </h3>
-            <p className="text-sm md:text-xl uppercase tracking-[0.2em]">
+            <p className="text-xs md:text-xl uppercase tracking-[0.2em]">
               Hawksmoor House
             </p>
           </div>
@@ -150,7 +150,7 @@ const Homepage = () => {
         {/* Photo Gallery */}
         <div className="pt-20 relative w-full h-60 md:h-160">
           <img
-            src="/images/SasPiet-banner.JPG"
+            src="/images/SasPiet-banner.jpg"
             alt="Pieter and Saskia on the beach"
             className="flex-1 w-full h-full object-cover mx-auto sm:mx-0"
           />
