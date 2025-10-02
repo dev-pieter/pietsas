@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import { ExternalLink } from "lucide-react";
 
 const images = [
   "/images/saspiet-web-14-min.jpg",
@@ -310,7 +311,7 @@ const Homepage = () => {
               <br />
               <br />
               Address: Hawksmoor House, R304, Stellenbosch Farms, Cape Town,
-              7600 [View on Google Maps]
+              7600. <a href="https://maps.app.goo.gl/y27cuKBvZ6uRoojRA" className="underline flex items-center gap-2" target="_blank">View on Google Maps <ExternalLink size={16} /></a>
             </p>
           </div>
           <div className="pb-4">
@@ -406,8 +407,8 @@ const Homepage = () => {
             </p>
             <p className="text-secondary-foreground">
               Your presence is truly the greatest gift. But if you'd like to
-              contribute to our honeymoon or future home, we've created a
-              registry here: [Insert link]
+              contribute to our honeymoon or future home, we'll share a registry with
+              you closer to the date.
             </p>
           </div>
         </div>
