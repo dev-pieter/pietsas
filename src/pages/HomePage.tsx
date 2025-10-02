@@ -116,8 +116,8 @@ const Homepage = () => {
                   our love with you in beautiful Stellenbosch on Saturday, 7
                   February 2026. We've created this space to keep you updated
                   with all the important details. Thank you for being part of
-                  this special chapter in our lives. We are so greatful to be
-                  sharing this momnent with the people we love. Thank you for
+                  this special chapter in our lives. We are so grateful to be
+                  sharing this moment with the people we love. Thank you for
                   being part of our story.
                 </p>
 
@@ -288,18 +288,6 @@ const Homepage = () => {
                   please wear sunscreen and consider the weather when planning
                   your outfit.
                 </p>
-                {/* Our wedding will be an elegant outdoor celebration under the oak trees of Hawksmoor House.
-Think Mediterranean meets Cape Winelands: timeless, relaxed and a little romantic.
-We love soft, natural tones that complement the setting—neutrals, sage, dusty blues, warm terracottas, blush, champagne, and muted pastels all blend beautifully with the surroundings.
-Dress it up to wedding-guest chic (cocktail or semi-formal), but feel free to play with colour within this soft, sun-washed palette.
-
-Footwear
-The ceremony and reception will take place on lawns and gravel paths, so we recommend block heels, wedges, or smart flats over stilettos or thin heels to keep you comfortable.
-
-Sun & Weather
-Our celebrations will unfold mostly outdoors in the late-summer sun.
-While we’ll provide shade where we can, please wear sunscreen and consider a stylish hat or fascinator for the daytime.
-As evenings in the Winelands can cool off, a light shawl, jacket, or wrap will help you stay cosy once the sun sets. */}
               </div>
             </div>
           </div>
@@ -440,7 +428,6 @@ As evenings in the Winelands can cool off, a light shawl, jacket, or wrap will h
           ></iframe>
         </div>
       </section>
-      {/* <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScYcEEOAuIKUvTWaW7MAoZcwHDpmftTNxG32kel8D6hu3tjxQ/viewform?embedded=true" width="640" height="1347" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe> */}
     </div>
   );
 };
