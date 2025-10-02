@@ -424,7 +424,7 @@ const Homepage = () => {
           </div>
           <iframe
             src={import.meta.env.VITE_RSVP_URL}
-            className="w-full h-150 rounded-md drop-shadow-lg"
+            className="w-full h-195 rounded-md border border-secondary/60"
           ></iframe>
         </div>
       </section>
