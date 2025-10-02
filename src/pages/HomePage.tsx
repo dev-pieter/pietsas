@@ -1,22 +1,22 @@
 import { Button } from "@/components/ui/button";
 
 const images = [
-  "/images/saspiet-web-14.jpg",
-  "/images/saspiet-web-1.jpg",
-  "/images/saspiet-web-2.jpg",
-  "/images/saspiet-web-4.jpg",
-  "/images/saspiet-web-6.jpg",
-  "/images/saspiet-web-8.jpg",
-  "/images/saspiet-web-7.jpg",
-  "/images/saspiet-web-12.jpg",
-  "/images/saspiet-web-9.jpg",
-  "/images/saspiet-web-10.jpg",
-  "/images/saspiet-web-3.jpg",
-  "/images/saspiet-web-13.jpg",
-  "/images/saspiet-web-5.jpg",
-  "/images/saspiet-web-15.jpg",
-  "/images/saspiet-web-16.jpg",
-  "/images/saspiet-web-11.jpg",
+  "/images/saspiet-web-14-min.jpg",
+  "/images/saspiet-web-1-min.jpg",
+  "/images/saspiet-web-2-min.jpg",
+  "/images/saspiet-web-4-min.jpg",
+  "/images/saspiet-web-6-min.jpg",
+  "/images/saspiet-web-8-min.jpg",
+  "/images/saspiet-web-7-min.jpg",
+  "/images/saspiet-web-12-min.jpg",
+  "/images/saspiet-web-9-min.jpg",
+  "/images/saspiet-web-10-min.jpg",
+  "/images/saspiet-web-3-min.jpg",
+  "/images/saspiet-web-13-min.jpg",
+  "/images/saspiet-web-5-min.jpg",
+  "/images/saspiet-web-15-min.jpg",
+  "/images/saspiet-web-16-min.jpg",
+  "/images/saspiet-web-11-min.jpg",
 ];
 
 const Homepage = () => {
@@ -150,7 +150,8 @@ const Homepage = () => {
         {/* Photo Gallery */}
         <div className="pt-20 relative w-full h-60 md:h-160">
           <img
-            src="/images/saspiet-web-banner.jpg"
+            loading="lazy"
+            src="/images/saspiet-web-banner-min.jpg"
             alt="Pieter and Saskia on the beach"
             className="flex-1 w-full h-full object-cover mx-auto sm:mx-0"
           />
