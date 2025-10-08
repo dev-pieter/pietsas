@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { Download, ExternalLink, ForkKnife } from "lucide-react";
+import { ExternalLink, ForkKnife } from "lucide-react";
 
 const images = [
   "/images/saspiet-web-14-min.jpg",
@@ -176,12 +176,12 @@ const Homepage = () => {
                     className="rounded-sm"
                     onClick={() =>
                       window.open(
-                        "https://www.google.com/maps/dir//Hawksmoor+House,+R304,+Stellenbosch+Farms,+Cape+Town,+7600/@-33.907569,18.7869563,12z/data=!4m8!4m7!1m0!1m5!1m1!1s0x1dcc5d3f2f4f4b7b:0x8e5c6f3c6f3c6f3c!2m2!1d18.8533299!2d-33.9075743",
+                        "/hh_brochure.pdf",
                         "_blank"
                       )
                     }
                   >
-                    Download brochure <Download size={14} />
+                    View brochure <ExternalLink size={14} />
                   </Button>
                 </div>
                 <p className="text-[#271203] text-justify mb-6">
