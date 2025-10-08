@@ -11,8 +11,8 @@
   --card-foreground: oklch(0.145 0 0);
   --popover: oklch(1 0 0);
   --popover-foreground: oklch(0.145 0 0);
-  --primary: rgb(160, 179, 211); /* Bright, vibrant blue */
-  --primary-foreground: rgb(67, 104, 125);
+  --primary: #a0b3d3; /* Bright, vibrant blue */
+  --primary-foreground: #43687d;
   --secondary: #8A8342;
   --secondary-foreground: oklch(1 0 0);
   --muted: rgb(171, 172, 90);

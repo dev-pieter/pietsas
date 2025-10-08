@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { ExternalLink } from "lucide-react";
+import { Download, ExternalLink, ForkKnife } from "lucide-react";
 
 const images = [
   "/images/saspiet-web-14-min.jpg",
@@ -29,29 +29,11 @@ const Homepage = () => {
           {/* Film Roll Container */}
           <div className="absolute inset-0 flex animate-film-scroll">
             {/* First set of images */}
-            {images.map((src, index) => (
+            {images.concat(images).map((src, index) => (
               <img
                 key={index}
                 src={src}
                 alt={`Pieter and Saskia ${index + 1}`}
-                className="w-48 sm:w-64 md:w-80 h-64 sm:h-80 md:h-120 object-cover shadow-lg flex-shrink-0"
-              />
-            ))}
-            {/* Duplicate set for seamless loop */}
-            {/* {images.map((src, index) => (
-              <img
-                key={index + images.length}
-                src={src}
-                alt={`Pieter and Saskia duplicate ${index + 1}`}
-                className="w-48 sm:w-64 md:w-80 h-64 sm:h-80 md:h-120 object-cover shadow-lg flex-shrink-0"
-              />
-            ))} */}
-            {/* Duplicate set for seamless loop */}
-            {images.map((src, index) => (
-              <img
-                key={index + images.length}
-                src={src}
-                alt={`Pieter and Saskia duplicate ${index + 1}`}
                 className="w-48 sm:w-64 md:w-80 h-64 sm:h-80 md:h-120 object-cover shadow-lg flex-shrink-0"
               />
             ))}
@@ -62,10 +44,6 @@ const Homepage = () => {
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-serif mb-4 sm:mb-6 md:mb-8 text-white leading-tight tracking-[0.2em] text-center">
               WE'RE GETTING MARRIED
             </h1>
-
-            {/* <p className="text-xs sm:text-sm tracking-[0.2em] uppercase text-white drop-shadow-lg">
-              PIETER & SASKIA
-            </p> */}
           </div>
         </div>
       </section>
@@ -87,7 +65,7 @@ const Homepage = () => {
               TIME
             </h3>
             <p className="text-xs md:text-xl uppercase tracking-[0.2em]">
-              16:00
+              17:00
             </p>
           </div>
 
@@ -109,7 +87,7 @@ const Homepage = () => {
             {/* Story Text */}
             <div className="space-y-6 text-[#496677] leading-relaxed text-justify">
               <div>
-                <h2 className="text-center text-4xl uppercase font-serif text-[#271203] mb-4 tracking-[0.2em]">
+                <h2 className="text-center text-2xl sm:text-4xl uppercase font-serif text-[#271203] mb-4 tracking-[0.2em]">
                   and you're invited!
                 </h2>
                 <p className="mb-6 text-lg text-[#271203]">
@@ -122,10 +100,10 @@ const Homepage = () => {
                   being part of our story.
                 </p>
 
-                <h2 className="pr-8 uppercase font-serif tracking-[0.2em] italic text-center text-lg text-[#271203] mb-2">
+                <h2 className="pr-8 italic text-center text-lg text-[#271203] mb-2">
                   with love,
                 </h2>
-                <h2 className="pl-8 italic uppercase font-serif tracking-[0.2em] text-center text-lg text-[#271203]">
+                <h2 className="pl-8 italic text-center text-lg text-[#271203]">
                   piet & sas
                 </h2>
               </div>
@@ -133,7 +111,7 @@ const Homepage = () => {
             <Button
               size="lg"
               variant="secondary"
-              className="w-full mx-auto uppercase text-lg rounded-xs"
+              className="w-full mx-auto uppercase text-lg rounded-sm"
               onClick={() => {
                 const rsvpSection = document.getElementById("rsvp");
                 if (rsvpSection) {
@@ -162,52 +140,70 @@ const Homepage = () => {
       {/* Event Details */}
       <section className="pt-20 pb-20">
         <div className="mx-auto text-center">
-          <h2 className="text-center text-4xl uppercase font-serif text-[#271203] mb-4 tracking-[0.2em]">
+          <h2 className="text-center text-2xl sm:text-4xl uppercase font-serif text-[#271203] mb-4 tracking-[0.2em]">
             event details
           </h2>
           <div className="mb-20 px-6">
-            <h2 className="text-2xl uppercase mb-8 text-[#271203] tracking-[0.2em]">
-              When & Where
+            <h2 className="text-xl sm:text-2xl uppercase mb-8 text-[#271203] tracking-[0.2em]">
+              Where & When
             </h2>
-            <img
-              src="/images/hawksmoor.png"
-              className="m-auto w-xl object-cover h-80"
-            ></img>
-            <p className="text-[#8a8a8aa1] text-center mb-6 italic">
-              Matjieskuil Farm, R304, Stellenbosch 7599. <br />
-              <a
-                className="underline"
-                href="https://www.hawksmoor.co.za"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Go to website
-              </a>
-            </p>
             <div className="text-lg max-w-4xl mx-auto">
               <div className="text-center">
+                <h3 className="text-sm tracking-[0.2em] uppercase text-secondary mb-4">
+                  Hawksmoor House
+                </h3>
+                <p className="text-center mb-6 italic text-sm">
+                  Matjieskuil Farm, R304, Stellenbosch 7599.
+                </p>
+                <img
+                  src="/images/hawksmoor.png"
+                  className="m-auto w-xl object-cover h-70 sm:h-80"
+                ></img>
+                <div className="flex justify-center gap-4 mb-6">
+                  <Button
+                    variant="secondary"
+                    className="rounded-sm"
+                    size="sm"
+                    onClick={() =>
+                      window.open("https://www.hawksmoor.co.za", "_blank")
+                    }
+                  >
+                    Visit website <ExternalLink size={14} />
+                  </Button>
+                  <Button
+                    variant="secondary"
+                    size="sm"
+                    className="rounded-sm"
+                    onClick={() =>
+                      window.open(
+                        "https://www.google.com/maps/dir//Hawksmoor+House,+R304,+Stellenbosch+Farms,+Cape+Town,+7600/@-33.907569,18.7869563,12z/data=!4m8!4m7!1m0!1m5!1m1!1s0x1dcc5d3f2f4f4b7b:0x8e5c6f3c6f3c6f3c!2m2!1d18.8533299!2d-33.9075743",
+                        "_blank"
+                      )
+                    }
+                  >
+                    Download brochure <Download size={14} />
+                  </Button>
+                </div>
                 <p className="text-[#271203] text-justify mb-6">
                   We can’t wait to celebrate with you in the beautiful Cape
-                  Winelands! Our wedding will take place on Friday, 7 February
-                  2026 at the charming Hawksmoor House near Stellenbosch.
-                  Hawksmoor House is a historic Cape Dutch homestead set on a
-                  working wine farm, about 40 minutes from Cape Town and 20
-                  minutes from Stellenbosch town centre. There is ample on-site
-                  parking, and for those staying nearby, Uber & Bolt do operate
-                  in the area.
+                  Winelands! Our wedding will take place on Saturday, 7 February
+                  2026 at the charming Hawksmoor House near Stellenbosch. The
+                  venue is a 40 minute drive from Cape Town and 20 minutes from
+                  Stellenbosch town centre. There is ample on-site parking, and
+                  for those staying nearby, Uber & Bolt do operate in the area.
                 </p>
               </div>
             </div>
           </div>
           <div className="mb-10 bg-secondary w-full">
             {/* Schedule */}
-            <h2 className="text-2xl pt-8 uppercase mb-8 text-secondary-foreground tracking-[0.2em]">
+            <h2 className="text-xl sm:text-2xl pt-8 uppercase mb-8 text-secondary-foreground tracking-[0.2em]">
               Order of Events
             </h2>
             <div className="grid gap-4 grid-cols-1 md:grid-cols-5 mx-auto py-8 text-center">
               <div className="pb-4">
                 <p className="text-secondary-foreground font-serif tracking-[0.2em] font-bold text-4xl mb-4">
-                  16:00
+                  17:00
                 </p>
                 <p className="text-secondary-foreground uppercase">
                   Arrival & Drinks
@@ -215,13 +211,13 @@ const Homepage = () => {
               </div>
               <div className="pb-4">
                 <p className="text-secondary-foreground tracking-[0.2em] font-bold text-4xl mb-4 font-serif">
-                  16:30
+                  17:30
                 </p>
                 <p className="text-secondary-foreground uppercase">Ceremony</p>
               </div>
               <div className="pb-4">
                 <p className="text-secondary-foreground tracking-[0.2em] font-bold text-4xl mb-4 font-serif">
-                  17:00
+                  18:00
                 </p>
                 <p className="text-secondary-foreground uppercase">
                   Cocktail Hour
@@ -229,7 +225,7 @@ const Homepage = () => {
               </div>
               <div className="pb-4">
                 <p className="text-secondary-foreground tracking-[0.2em] font-bold text-4xl mb-4 font-serif">
-                  18:30
+                  19:00
                 </p>
                 <p className="text-secondary-foreground uppercase">
                   Reception & Dinner
@@ -237,7 +233,7 @@ const Homepage = () => {
               </div>
               <div className="pb-4">
                 <p className="text-secondary-foreground tracking-[0.2em] font-bold text-4xl mb-4 font-serif">
-                  20:30
+                  22:00
                 </p>
                 <p className="text-secondary-foreground uppercase">Dancing</p>
               </div>
@@ -252,13 +248,14 @@ const Homepage = () => {
               1 ENTRANCE GATE | 2 PARKING | 3 ARRIVAL DRINKS | 4 CEREMONY
             </p>
             <p className="text-secondary text-center mb-6">
-              5 COCKTAILS & CANAPES | 6 RECEPTION AREA | 7 DANCEFLOOR | 8 RESTROOMS
+              5 COCKTAILS & CANAPES | 6 RECEPTION AREA | 7 DANCEFLOOR | 8
+              RESTROOMS
             </p>
           </div>
 
           {/* Dress Code */}
           <div className="mb-20 px-6">
-            <h2 className="text-2xl uppercase mb-8 text-[#271203] tracking-[0.2em]">
+            <h2 className="text-xl sm:text-2xl uppercase mb-8 text-[#271203] tracking-[0.2em]">
               Dress Code
             </h2>
             <div className="text-lg max-w-4xl mx-auto">
@@ -269,9 +266,13 @@ const Homepage = () => {
                 <p className="text-[#271203] text-justify mb-6">
                   Our wedding will be an elegant outdoor celebration under the
                   oak trees of Hawksmoor House. Think Mediterranean meets Cape
-                  Winelands: timeless, relaxed and a little romantic. As for
-                  colour - don't be shy, any colour is welcome! Yes - even black
-                  or red, but please do avoid white or ivory!
+                  Winelands: timeless, relaxed and a little romantic. If you're
+                  wondering which colours you should consider, we recommend
+                  earthy tones, soft pastels, and natural fabrics that
+                  complement the outdoor setting. But ultimately any colours are
+                  welcome - yes, that includes black and red! - however we do
+                  kindly ask that you avoid white or ivory to ensure the focus
+                  remains on the bride.
                 </p>
                 <h3 className="text-sm tracking-[0.2em] uppercase text-secondary mb-4">
                   Footwear
@@ -296,7 +297,7 @@ const Homepage = () => {
         </div>
       </section>
       <section id="event-details" className="w-full bg-secondary pt-8 pb-8">
-        <h2 className="text-center text-4xl uppercase font-serif text-secondary-foreground mb-4 tracking-[0.2em]">
+        <h2 className="text-center text-2xl sm:text-4xl uppercase font-serif text-secondary-foreground mb-4 tracking-[0.2em]">
           FAQ
         </h2>
         <div className="max-w-4xl mx-auto text-lg text-justify px-6">
@@ -311,7 +312,14 @@ const Homepage = () => {
               <br />
               <br />
               Address: Hawksmoor House, R304, Stellenbosch Farms, Cape Town,
-              7600. <a href="https://maps.app.goo.gl/y27cuKBvZ6uRoojRA" className="underline flex items-center gap-2" target="_blank">View on Google Maps <ExternalLink size={16} /></a>
+              7600.{" "}
+              <a
+                href="https://maps.app.goo.gl/y27cuKBvZ6uRoojRA"
+                className="underline flex items-center gap-2"
+                target="_blank"
+              >
+                View on Google Maps <ExternalLink size={16} />
+              </a>
             </p>
           </div>
           <div className="pb-4">
@@ -319,8 +327,8 @@ const Homepage = () => {
               What time should I arrive?
             </p>
             <p className="text-secondary-foreground">
-              Please arrive by 16:00 for welcome drinks. The ceremony will begin
-              promptly at 16:30.
+              Please arrive by 17:00 for welcome drinks. The ceremony will begin
+              promptly at 17:30.
             </p>
           </div>
           <div className="pb-4">
@@ -340,10 +348,10 @@ const Homepage = () => {
             </p>
             <p className="text-secondary-foreground">
               Garden Formal: think relaxed summer elegance. Linen suits, light
-              fabrics, flowy dresses, soft colours—feel free to lean into tones
-              of blue, green, neutrals or earthy shades. It will be warm during
-              the day, with a breeze in the evening—bring a light layer if you
-              get chilly easily.
+              fabrics, long or midi flowy dresses, soft colours—feel free to
+              lean into tones of blue, green, neutrals or earthy shades. It will
+              be warm during the day, with a breeze in the evening—bring a light
+              layer if you get chilly easily.
             </p>
           </div>
           <div className="pb-4">
@@ -370,9 +378,9 @@ const Homepage = () => {
               Can I bring a plus one?
             </p>
             <p className="text-secondary-foreground">
-              If your invitation included a plus one, you’ll see that option
-              when you RSVP. Otherwise, we’re keeping the celebration intimate
-              with our closest family and friends.
+              We've made sure to directly invite all our guests - if your plus
+              one hasn't received the invite themselves, we unfortunately can't
+              accommodate them. We hope you understand!
             </p>
           </div>
           <div className="pb-4">
@@ -380,7 +388,7 @@ const Homepage = () => {
               What kind of food will there be?
             </p>
             <p className="text-secondary-foreground">
-              Expect a seasonal summer menu inspired by the Western Cape—think
+              Expect a seasonal summer menu inspired by the Western Cape — think
               fresh ingredients, family-style dining, and a few local delights.
               Kindly let us know whether you have any dietary requirements we
               should know about ahead of time.
@@ -391,14 +399,14 @@ const Homepage = () => {
               Will there be a bar?
             </p>
             <p className="text-secondary-foreground">
-              No need for wallets—we’ve got you covered! We’ll be providing a
+              No need for wallets — we’ve got you covered! We’ll be providing a
               generous selection of drinks for the evening, including local
               wines, MCC for toasts, and both beer and gin & tonic on tap. If
-              you have a special favourite tipple that you simply can’t
-              celebrate without, you’re welcome to bring a bottle along- just
-              please keep it discreet (think a single bottle, not a big cooler
-              box). Our goal is to keep the atmosphere relaxed and elegant,
-              without bulky coolers cluttering the party. Cheers!
+              you have a special favourite drink that you simply can’t celebrate
+              without, you’re welcome to bring a bottle along - just please keep
+              it discreet (think a single bottle, not a big cooler box). Our
+              goal is to keep the atmosphere relaxed and elegant, without bulky
+              coolers cluttering the party. Cheers!
             </p>
           </div>
           <div className="pb-4">
@@ -407,28 +415,94 @@ const Homepage = () => {
             </p>
             <p className="text-secondary-foreground">
               Your presence is truly the greatest gift. But if you'd like to
-              contribute to our honeymoon or future home, we'll share a registry with
-              you closer to the date.
+              contribute to our honeymoon or future home, please see our banking
+              details and registry below.
+            </p>
+          </div>
+          <div className="pb-4">
+            <p className="text-secondary-foreground font-bold mb-4">
+              Will there be on-site accommodation?
+            </p>
+            <p className="text-secondary-foreground">
+              All the on-site accommodation will be reserved for our closest family and wedding party. There are plenty of lovely places to stay in and around Stellenbosch, ranging from charming guesthouses to boutique hotels. We recommend booking early as February is a popular time in the Cape Winelands. Feel free to reach out if you need any recommendations!
             </p>
           </div>
         </div>
       </section>
-      <section className="pt-20 pb-20 max-w-4xl m-auto" id="rsvp">
-        <h2 className="text-center text-4xl uppercase font-serif text-[#271203] mb-4 tracking-[0.2em]">
+      <section className="pt-20" id="registry">
+        <div className="mx-auto text-center">
+          <h2 className="text-center text-2xl sm:text-4xl uppercase font-serif text-[#271203] mb-4 tracking-[0.2em]">
+            Gift Registry
+          </h2>
+          <div className="text-lg max-w-4xl mx-auto px-6">
+            <p className="text-[#271203] text-justify mb-6">
+              Your presence is truly the greatest gift. But if you'd like to
+              contribute to our honeymoon or future home, please see our banking
+              details and registry below.
+            </p>
+          </div>
+          <div className="mb-20 px-6">
+            {/* <h2 className="text-xl sm:text-2xl uppercase mb-8 text-[#271203] tracking-[0.2em]">
+              Contribute to our honeymoon
+            </h2> */}
+            <div className="text-lg max-w-4xl mx-auto">
+              <div className="text-center">
+                <h3 className="text-sm tracking-[0.2em] uppercase text-secondary mb-4">
+                  Contribute to our honeymoon
+                </h3>
+                <p className="text-[#271203] mb-6 text-sm">
+                  Bank: <b>Discovery</b> <br />
+                  Account Name: <b>Saskia De Bok</b> <br />
+                  Account Number: <b>17641040526</b> <br />
+                  Branch Code: <b>679000</b> <br />
+                  Reference: <b>Your name</b>
+                </p>
+              </div>
+              <div className="text-center">
+                <h3 className="text-sm tracking-[0.2em] uppercase text-secondary mb-4">
+                  View our gift registry
+                </h3>
+                <Button
+                  variant="secondary"
+                  className="rounded-sm"
+                  onClick={() =>
+                    window.open(
+                      "https://www.yuppiechef.com/yc8959914",
+                      "_blank"
+                    )
+                  }
+                >
+                  Yuppiechef <ForkKnife size={14} />
+                </Button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section className="pt-20 pb-20 bg-secondary" id="rsvp">
+        <h2 className="text-center text-2xl sm:text-4xl uppercase font-serif text-white mb-4 tracking-[0.2em]">
           RSVP
         </h2>
         <div className="text-lg max-w-4xl mx-auto px-6">
           <div className="text-center">
-            <p className="text-[#271203] mb-6">
-              Please submit your RSVP by 1 December 2025. We can’t wait to
-              celebrate with you!
+            <p className="text-white mb-6">
+              Please submit your rsvp by 1 December 2025.
             </p>
           </div>
-          <iframe
+          {/* <iframe
             src={import.meta.env.VITE_RSVP_URL}
             className="w-full h-195 rounded-md border border-secondary/60"
-          ></iframe>
+          ></iframe> */}
         </div>
+        <iframe
+          id=""
+          allowTransparency
+          allowFullScreen
+          allow="geolocation; microphone; camera"
+          src={import.meta.env.VITE_RSVP_URL}
+          frameBorder={0}
+          className="w-full h-120 rounded-sm"
+        ></iframe>
       </section>
     </div>
   );
