@@ -429,7 +429,7 @@ const Homepage = () => {
           </div>
         </div>
       </section>
-      <section className="pt-20" id="registry">
+      <section className="pt-40 pb-20" id="registry">
         <div className="mx-auto text-center">
           <h2 className="text-center text-2xl sm:text-4xl uppercase font-serif text-[#271203] mb-4 tracking-[0.2em]">
             Gift Registry
@@ -448,7 +448,7 @@ const Homepage = () => {
             <div className="text-lg max-w-4xl mx-auto">
               <div className="text-center">
                 <h3 className="text-sm tracking-[0.2em] uppercase text-secondary mb-4">
-                  Contribute to our honeymoon or home
+                  Contribute to our honeymoon
                 </h3>
                 <p className="text-[#271203] mb-6 text-sm">
                   Bank: <b>Discovery</b> <br />
