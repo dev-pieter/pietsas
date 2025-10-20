@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { ExternalLink, ForkKnife } from "lucide-react";
+import { ExternalLink } from "lucide-react";
 
 const images = [
   "/images/saspiet-web-14-min.jpg",
@@ -411,12 +411,12 @@ const Homepage = () => {
           </div>
           <div className="pb-4">
             <p className="text-secondary-foreground font-bold mb-4">
-              Is there a gift registry?
+              What about gifts?
             </p>
-            <p className="text-secondary-foreground">
+            <p className="text-secondary-foreground mb-4">
               Your presence is truly the greatest gift. But if you'd like to
-              contribute to our honeymoon or future home, please see our banking
-              details and registry below.
+              contribute to our honeymoon or future home, you can use the banking
+              details below or wait for the gift registry link to be added.
             </p>
           </div>
           <div className="pb-4">
@@ -437,8 +437,8 @@ const Homepage = () => {
           <div className="text-lg max-w-4xl mx-auto px-6">
             <p className="text-[#271203] text-justify mb-6">
               Your presence is truly the greatest gift. But if you'd like to
-              contribute to our honeymoon or future home, please see our banking
-              details and registry below.
+              contribute to our honeymoon or home, please see our banking
+              details below or wait for the gift registry link to be added here.
             </p>
           </div>
           <div className="mb-20 px-6">
@@ -448,7 +448,7 @@ const Homepage = () => {
             <div className="text-lg max-w-4xl mx-auto">
               <div className="text-center">
                 <h3 className="text-sm tracking-[0.2em] uppercase text-secondary mb-4">
-                  Contribute to our honeymoon
+                  Contribute to our honeymoon or home
                 </h3>
                 <p className="text-[#271203] mb-6 text-sm">
                   Bank: <b>Discovery</b> <br />
@@ -457,23 +457,6 @@ const Homepage = () => {
                   Branch Code: <b>679000</b> <br />
                   Reference: <b>Your name</b>
                 </p>
-              </div>
-              <div className="text-center">
-                <h3 className="text-sm tracking-[0.2em] uppercase text-secondary mb-4">
-                  View our gift registry
-                </h3>
-                <Button
-                  variant="secondary"
-                  className="rounded-sm"
-                  onClick={() =>
-                    window.open(
-                      "https://www.yuppiechef.com/yc8959914",
-                      "_blank"
-                    )
-                  }
-                >
-                  Yuppiechef <ForkKnife size={14} />
-                </Button>
               </div>
             </div>
           </div>
