@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { ExternalLink } from "lucide-react";
+import ImageGrid from "@/components/ui/image-grid";
 
 const images = [
   "/images/saspiet-web-14-min.jpg",
@@ -285,13 +286,23 @@ const Homepage = () => {
                 <h3 className="text-sm tracking-[0.2em] uppercase text-secondary mb-4">
                   Sun & Weather
                 </h3>
-                <p className="text-[#271203] text-justify">
+                <p className="text-[#271203] text-justify mb-8">
                   Our celebrations will unfold mostly outdoors in the
-                  late-summer sun. While we’ll provide shade where we can,
+                  late-summer sun. While we'll provide shade where we can,
                   please wear sunscreen and consider the weather when planning
                   your outfit.
                 </p>
+
+                {/* Guest Look Inspiration */}
+                <h3 className="text-sm tracking-[0.2em] uppercase text-secondary mb-4 mt-8">
+                  Inspiration
+                </h3>
+                <p className="text-[#271203] text-justify mb-8">
+                  Need some visual inspiration? Browse our curated collection of guest looks below for ideas on what to wear to our garden celebration.
+                </p>
               </div>
+              {/* Image Grid Component */}
+            <ImageGrid />
             </div>
           </div>
         </div>
