@@ -21,6 +21,35 @@ const images = [
   "/images/saspiet-web-11-min.jpg",
 ];
 
+const shopVouchers = [
+  {
+    name: "Yuppiechef",
+    link: "https://m.yuppiechef.com/gift-vouchers.htm?display=mobile&campaignid=17958170801&adgroupid=&keyword=&device=c&network=x&devm=&gad_source=1&gad_campaignid=21496974153&gclid=Cj0KCQiA9OnJBhD-ARIsAPV51xPo6g3CZu9WjOmstn5WcUEgU65DD7ziq7052ltAaw3-dOIi8BTbtXAaAkkoEALw_wcB",
+  },
+  {
+    name: "Woolworths",
+    link: "https://www.woolworths.co.za/cat/Gift-Cards/_/N-1crqbxv?gclsrc=aw.ds&gad_source=1&gad_campaignid=23210158243&gbraid=0AAAAA-WS_YhRtjKqz_Q2ICSwL4_Qb0gNd&gclid=Cj0KCQiA9OnJBhD-ARIsAPV51xOjIw0QYXZapXDSTY75LI7WBmaETPRLpGk-1_qMY3s5XSOGpwAEq4oaAlmSEALw_wcB",
+  },
+  {
+    name: "Country Road",
+    link: "https://www.woolworths.co.za/cat/Women/Gift-Cards/Country-Roads-Trenery-Gift-Cards/_/N-vebiwy?gclsrc=aw.ds&gad_source=1&gad_campaignid=22046872688&gbraid=0AAAAA-WS_YiyEyyNEb9ANua1ZbLXZSU3p&gclid=Cj0KCQiA9OnJBhD-ARIsAPV51xNtYtL2ZUFEm8ObTlHgIkyOjeajDAeTFbXrNCt_aqN60sjwfmBGTjcaAvIvEALw_wcB",
+  },
+  {
+    name: "Poetry",
+    link: "https://www.poetrystores.co.za/c/gift-cards?utm_source=google&utm_medium=cpc&initial_utm_medium=google&initial_utm_source=cpc&gad_source=1&gad_campaignid=18885813058&gbraid=0AAAAACcms3PwaezCfB8BZdOPpOQDVJ3wR&gclid=Cj0KCQiA9OnJBhD-ARIsAPV51xM6CVRAxoVEwRF_7Y8FAYomNoa16uc2Cdf3uJCDG9U8tK-8y2sXf3caAtn0EALw_wcB",
+  },
+  {
+    name: "@home",
+    link: "https://www.athome.co.za",
+  },
+  {
+    name: "Coricraft",
+    link: "https://coricraft.co.za",
+  }
+];
+
+const registryLink = "https://www.myregistry.com/wedding-registry/saskia-de-bok-and-pieter-nortje-cape-town-wc/5097326"
+
 const Homepage = () => {
   return (
     <div className="min-h-screen bg-white">
@@ -461,6 +490,35 @@ const Homepage = () => {
                   Branch Code: <b>679000</b> <br />
                   Reference: <b>Your name</b>
                 </p>
+                <h3 className="text-sm tracking-[0.2em] uppercase text-secondary mb-4">
+                  Retailers or Vouchers we would love
+                </h3>
+                <p className="text-sm text-center flex flex-wrap justify-center gap-4 mb-6">
+                  {shopVouchers.map((shop, index) => (
+                      <a
+                        key={index}
+                        href={shop.link}
+                        className="underline font-bold text-[#271203] uppercase flex items-center gap-2 justify-center mb-2"
+                        target="_blank"
+                      >
+                        {shop.name} 
+                        {index < shopVouchers.length - 1 ? (
+                          <span>|</span>
+                        ) : null}
+                      </a>
+                  ))}
+                </p>
+                <h3 className="text-sm tracking-[0.2em] uppercase text-secondary mb-4">
+                  Gift Registry
+                </h3>
+                <Button
+                  variant="secondary"
+                  className="rounded-sm"
+                  size="sm"
+                  onClick={() => window.open(registryLink, "_blank")}
+                >
+                  View Registry <ExternalLink size={14} />
+                </Button>
               </div>
             </div>
           </div>
