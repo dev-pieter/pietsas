@@ -175,12 +175,7 @@ const Homepage = () => {
                     variant="secondary"
                     size="sm"
                     className="rounded-sm"
-                    onClick={() =>
-                      window.open(
-                        "/hh_brochure.pdf",
-                        "_blank"
-                      )
-                    }
+                    onClick={() => window.open("/hh_brochure.pdf", "_blank")}
                   >
                     View brochure <ExternalLink size={14} />
                   </Button>
@@ -292,17 +287,9 @@ const Homepage = () => {
                   please wear sunscreen and consider the weather when planning
                   your outfit.
                 </p>
-
-                {/* Guest Look Inspiration */}
-                <h3 className="text-sm tracking-[0.2em] uppercase text-secondary mb-4 mt-8">
-                  Inspiration
-                </h3>
-                <p className="text-[#271203] text-justify mb-8">
-                  Need some visual inspiration? Browse our curated collection of guest looks below for ideas on what to wear to our garden celebration.
-                </p>
               </div>
               {/* Image Grid Component */}
-            <ImageGrid />
+              <ImageGrid />
             </div>
           </div>
         </div>
@@ -426,8 +413,9 @@ const Homepage = () => {
             </p>
             <p className="text-secondary-foreground mb-4">
               Your presence is truly the greatest gift. But if you'd like to
-              contribute to our honeymoon or future home, you can use the banking
-              details below or wait for the gift registry link to be added.
+              contribute to our honeymoon or future home, you can use the
+              banking details below or wait for the gift registry link to be
+              added.
             </p>
           </div>
           <div className="pb-4">
@@ -435,7 +423,12 @@ const Homepage = () => {
               Will there be on-site accommodation?
             </p>
             <p className="text-secondary-foreground">
-              All the on-site accommodation will be reserved for our closest family and wedding party. There are plenty of lovely places to stay in and around Stellenbosch, ranging from charming guesthouses to boutique hotels. We recommend booking early as February is a popular time in the Cape Winelands. Feel free to reach out if you need any recommendations!
+              All the on-site accommodation will be reserved for our closest
+              family and wedding party. There are plenty of lovely places to
+              stay in and around Stellenbosch, ranging from charming guesthouses
+              to boutique hotels. We recommend booking early as February is a
+              popular time in the Cape Winelands. Feel free to reach out if you
+              need any recommendations!
             </p>
           </div>
         </div>
